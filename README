@@ -1,0 +1,11 @@
+This is a set of vim dot files
+
+To install:
+Windows:
+	cd c:\Users\gary
+	git clone http:// vimfiles
+	copy vimfiles/_vimrc
+Linux
+	cd ~
+	git clone http:// .vim
+	ln -s .vimrc .vim/vimrc

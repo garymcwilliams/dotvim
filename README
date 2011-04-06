@@ -9,3 +9,8 @@ Linux
 	cd ~
 	git clone http:// .vim
 	ln -s .vimrc .vim/vimrc
+
+please make sure you:
+git config core.filemode false
+git config core.autocrlf input
+(you can also use git config --global to apply these globally)

@@ -51,13 +51,9 @@ colorscheme koehler
 " Files/Backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup " dont make backup file
-set noswapfile " dont make swapfile
+"set backupdir=D:\\Users\\gary_mcwilliams\\temp\\vimfiles " where to put backup file
+set directory=D:\\Users\\gary_mcwilliams\\temp\\vimfiles " directory is the directory for temp file
 set makeef=error.err " When using make, where should it dump the file
-if has("win32") || has("win64")
-   set directory=$TMP
-else
-   set directory=/tmp
-end
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
@@ -108,6 +104,11 @@ set noexpandtab " real tabs please!
 "set nowrap " do not wrap lines  
 set smarttab " use tabs at the start of a line, spaces elsewhere
 
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -165,4 +166,3 @@ endif " has("autocmd")
 " file it was loaded from, thus the changes you made.
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
-

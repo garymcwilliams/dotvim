@@ -3,9 +3,21 @@ This is a set of vim dot files
 To install:
 Windows:
 	cd c:\Users\gary
-	git clone http:// vimfiles
+	git clone git://ssh.github.com/garymcwilliams/dotvim.git .vim
 	copy vimfiles/_vimrc
 Linux
 	cd ~
-	git clone http:// .vim
+	git clone git://ssh.github.com/garymcwilliams/dotvim.git .vim
 	ln -s .vimrc .vim/vimrc
+Then fetch submodules
+	cd .vim
+	git submodule update --init
+
+Later, if a plugin is updated
+	cd .vim/bundle/<pluginname>
+	git pull
+
+please make sure you:
+git config core.filemode false
+git config core.autocrlf input
+(you can also use git config --global to apply these globally)

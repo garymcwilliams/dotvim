@@ -52,7 +52,7 @@ colorscheme koehler
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup " dont make backup file
 "set backupdir=D:\\Users\\gary_mcwilliams\\temp\\vimfiles " where to put backup file
-set directory=D:\\Users\\gary_mcwilliams\\temp\\vimfiles " directory is the directory for temp file
+set directory=D:\\Users\\gmcwilliams\\temp\\vimfiles " directory is the directory for temp file
 set makeef=error.err " When using make, where should it dump the file
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,6 +129,15 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_win32")
+	set guifont=Consolas:h10:cANSI
+  endif
+endif
+
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")

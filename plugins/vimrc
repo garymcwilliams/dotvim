@@ -1,0 +1,13 @@
+" Local settings
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files/Backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "acer"
+"	set nobackup " dont make backup file
+	set directory=C:\\Users\\gary\\tmp " directory is the directory for temp file
+elseif hostname == "bfs-product-55"
+	set nobackup " dont make backup file
+	set directory=D:\\Users\\gmcwilliams\\tmp " directory is the directory for temp file
+endif

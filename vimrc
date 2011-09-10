@@ -48,9 +48,6 @@ colorscheme koehler
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files/Backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nobackup " dont make backup file
-"set backupdir=D:\\Users\\gary_mcwilliams\\temp\\vimfiles " where to put backup file
-set directory=D:\\Users\\gmcwilliams\\temp\\vimfiles " directory is the directory for temp file
 set makeef=error.err " When using make, where should it dump the file
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

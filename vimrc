@@ -43,7 +43,8 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark " we are using a dark background
 syntax on " syntax highlighting on
-colorscheme koehler
+"colorscheme koehler
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files/Backups

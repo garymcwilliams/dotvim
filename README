@@ -16,6 +16,9 @@ Then fetch submodules
 Later, if a plugin is updated
 	cd .vim/bundle/<pluginname>
 	git pull
+	NOTE: if a new plugin is added, then on each server you need to execute
+	git submodule init
+	git submodule update
 
 please make sure you:
 git config core.filemode false

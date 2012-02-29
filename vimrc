@@ -50,6 +50,11 @@ colorscheme solarized
 " Files/Backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set makeef=error.err " When using make, where should it dump the file
+" create a temp folder to hold temp files
+silent execute '!mkdir "'.$VIMRUNTIME.'/temp"'
+silent execute '!del "'.$VIMRUNTIME.'/temp/*~"'
+set backupdir=$VIMRUNTIME/temp//
+set directory=$VIMRUNTIME/temp//
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI

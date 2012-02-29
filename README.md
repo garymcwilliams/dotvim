@@ -29,16 +29,21 @@ Installation
 	git submodule update
 
 please make sure you:
+
 	git config core.filemode false
 	git config core.autocrlf input
+
 (you can also use `git config --global` to apply these globally)
 
 Using from work.
 ----------------
 
 standard git protocol is blocked, so we need to use ssh
+
 	git clone ssh://ssh.github.com/garymcwilliams/dotvim.git vimfiles
+
 This comes with the associated `.ssh/config` entry
+
 	Host ssh.github.com
 	Port 443
 	User git

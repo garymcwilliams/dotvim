@@ -11,7 +11,7 @@
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
-call pathogen#infect()
+call pathogen#infect('D:\Users\gmcwilliams\home\vimfiles\bundle\{}')
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -53,8 +53,8 @@ set makeef=error.err " When using make, where should it dump the file
 " create a temp folder to hold temp files
 silent execute '!mkdir "'.$TEMP.'/vimtemp"'
 silent execute '!del "'.$TEMP.'/vimtemp/*~"'
-set backupdir=$TEMP/vimtemp//
-set directory=$TEMP/vimtemp//
+set backupdir+=$TEMP/vimtemp//
+set directory+=$TEMP/vimtemp//
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI

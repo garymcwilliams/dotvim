@@ -11,7 +11,7 @@
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
-call pathogen#infect('D:\Users\gmcwilliams\home\vimfiles\bundle\{}')
+call pathogen#infect('E:\Users\gmcwilliams\home\vimfiles\bundle\{}')
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"

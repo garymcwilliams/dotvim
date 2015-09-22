@@ -11,7 +11,14 @@
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
-call pathogen#infect('E:\Users\gmcwilliams\home\vimfiles\bundle\{}')
+if has("win32") || has("win64")
+  call pathogen#infect('E:\Users\gmcwilliams\home\vimfiles\bundle\{}')
+else
+  call pathogen#infect('/e/Users/gmcwilliams/home/vimfiles/bundle/{}')
+endif
+
+" enable airtime extensions
+let g:airline#extensions#tabline#enabled = 1
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -22,7 +29,9 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible " get out of horrible vi-compatible mode
 
-source $VIMRUNTIME/mswin.vim
+if has("win32") || has("win64")
+  source $VIMRUNTIME/mswin.vim
+endif
 
 set ignorecase " case insensitive search
 set smartcase " ignore case if search pattern is all lowercase,
@@ -41,7 +50,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme/Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark " we are using a dark background
+set background=light " we are using a dark background
 syntax on " syntax highlighting on
 "colorscheme koehler
 colorscheme solarized
@@ -72,6 +81,7 @@ set shortmess=atI " shortens messages to avoid 'press a key' prompt
 set report=0 " tell us when anything is changed via :...
 " make the splitters between windows be blank
 set fillchars=vert:\ ,stl:\ ,stlnc:\
+set relativenumber
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Cues
@@ -134,3 +144,4 @@ autocmd BufReadPost *
 " file it was loaded from, thus the changes you made.
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
+

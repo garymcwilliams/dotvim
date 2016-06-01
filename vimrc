@@ -29,9 +29,16 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible " get out of horrible vi-compatible mode
 
+<<<<<<< Updated upstream
 if has("win32") || has("win64")
   source $VIMRUNTIME/mswin.vim
 endif
+=======
+set encoding=utf-8
+let g:Powerline_symbols = "fancy"
+
+source $VIMRUNTIME/mswin.vim
+>>>>>>> Stashed changes
 
 set ignorecase " case insensitive search
 set smartcase " ignore case if search pattern is all lowercase,
@@ -139,9 +146,4 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-	 	\ | wincmd p | diffthis
 

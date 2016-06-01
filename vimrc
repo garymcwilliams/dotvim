@@ -9,6 +9,8 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Init {{{
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
 if has("win32") || has("win64")
@@ -32,7 +34,10 @@ set nocompatible " get out of horrible vi-compatible mode
 if has("win32") || has("win64")
   source $VIMRUNTIME/mswin.vim
 endif
+" }}}
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Text Processing {{{
 set ignorecase " case insensitive search
 set smartcase " ignore case if search pattern is all lowercase,
               "    case-sensitive otherwise
@@ -46,28 +51,28 @@ set isk+=_,$,@,%,#,- " none of these should be word dividers, so make them not b
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme/Colors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme/Colors {{{
 set background=light " we are using a dark background
 syntax on " syntax highlighting on
 "colorscheme koehler
 colorscheme solarized
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Files/Backups
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files/Backups {{{
 set makeef=error.err " When using make, where should it dump the file
 " create a temp folder to hold temp files
 silent execute '!mkdir "'.$TEMP.'/vimtemp"'
 silent execute '!del "'.$TEMP.'/vimtemp/*~"'
 set backupdir+=$TEMP/vimtemp//
 set directory+=$TEMP/vimtemp//
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim UI
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim UI {{{
 set lsp=0 " space it out a little more (easier to read)
 set wildmenu " turn on wild menu
 set ruler " Always show current positions along the bottom 
@@ -82,10 +87,10 @@ set report=0 " tell us when anything is changed via :...
 " make the splitters between windows be blank
 set fillchars=vert:\ ,stl:\ ,stlnc:\
 set relativenumber
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Visual Cues
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Cues {{{
 set showmatch " show matching brackets
 set mat=5 " how many tenths of a second to blink matching brackets for
 "set nohlsearch " do not highlight searched for phrases
@@ -99,10 +104,10 @@ set noerrorbells " no noises
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ %04l/%04L(%p%%),%04v
 set statusline=%F%m%r%h%w\ %{&ff}\ %Y\ \%03.3b/\%02.2B\ %04l/%04L(%p%%),%04v
 set laststatus=2 " always show the status line
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Text Formatting/Layout
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Text Formatting/Layout {{{
 set fo=tcrqn " See Help (complex)
 set ai " autoindent
 set si " smartindent 
@@ -116,7 +121,10 @@ set smarttab " use tabs at the start of a line, spaces elsewhere
 
 set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
+" }}}
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Odds {{{
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -139,4 +147,8 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
+" }}}
+
+" zo opens a fold, zc closes a fold, za toggles fold
+" vim:foldmethod=marker:foldlevel=0
 

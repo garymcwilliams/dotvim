@@ -8,20 +8,21 @@ Installation
 
 (configured to use Windows vim rather than built-in vim)
 
-	cd c:\Users\gary
-	git clone git://ssh.github.com/garymcwilliams/dotvim.git vimfiles
+	cd e:\Users\gmcwilliams\home
+	git clone ssh://ssh.github.com/garymcwilliams/dotvim.git vimfiles
 	copy vimfiles/_vimrc
 
 ## Linux
 
 	cd ~
-	git clone git://ssh.github.com/garymcwilliams/dotvim.git .vim
+	git clone ssh://ssh.github.com/garymcwilliams/dotvim.git .vim
 	ln -s .vimrc .vim/vimrc
 
 ## Then fetch submodules
 
 	cd vimfiles
-	git submodule update --init
+	git submodule init
+	git submodule update
 
 # Keep up to date
 

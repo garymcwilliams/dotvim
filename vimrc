@@ -12,7 +12,7 @@
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
 if has("win32") || has("win64")
-  call pathogen#infect('E:\Users\gmcwilliams\home\vimfiles\bundle\{}')
+  call pathogen#infect('E:\\Users\\gmcwilliams\\home\\vimfiles\\bundle\\{}')
 else
   call pathogen#infect('/e/Users/gmcwilliams/home/vimfiles/bundle/{}')
 endif

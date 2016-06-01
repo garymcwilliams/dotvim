@@ -29,16 +29,9 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible " get out of horrible vi-compatible mode
 
-<<<<<<< Updated upstream
 if has("win32") || has("win64")
   source $VIMRUNTIME/mswin.vim
 endif
-=======
-set encoding=utf-8
-let g:Powerline_symbols = "fancy"
-
-source $VIMRUNTIME/mswin.vim
->>>>>>> Stashed changes
 
 set ignorecase " case insensitive search
 set smartcase " ignore case if search pattern is all lowercase,

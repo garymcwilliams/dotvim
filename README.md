@@ -28,8 +28,9 @@ Installation
 
 	cd vimfiles
 	git submodule update
-	If the above does not cause any updates to occur, then update manually:
-	git submodule foreach git pull origin master
+
+If the above does not cause any updates to occur, then update manually:
+git submodule foreach git pull origin master
 
 please make sure you:
 

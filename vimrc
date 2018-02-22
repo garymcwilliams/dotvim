@@ -14,9 +14,10 @@
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
 if has("win32") || has("win64")
-  call pathogen#infect('E:\\Users\\gmcwilliams\\home\\vimfiles\\bundle\\{}')
+  call pathogen#infect('C:\\Users\\gmcwilliams\\vimfiles\\bundle\\{}')
 else
-  call pathogen#infect('/e/Users/gmcwilliams/home/vimfiles/bundle/{}')
+	:echo "infecting ('/c/Users/gmcwilliams/vimfiles/bundle/{}'"
+  call pathogen#infect('/c/Users/gmcwilliams/vimfiles/bundle/{}')
 endif
 
 " enable airtime extensions
@@ -64,11 +65,11 @@ colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files/Backups {{{
 set makeef=error.err " When using make, where should it dump the file
-" create a temp folder to hold temp files
-silent execute '!mkdir "'.$TEMP.'/vimtemp"'
-silent execute '!del "'.$TEMP.'/vimtemp/*~"'
-set backupdir+=$TEMP/vimtemp//
-set directory+=$TEMP/vimtemp//
+if !isdirectory($TEMP."/vimtemp")
+	call mkdir($TEMP."/vimtemp", "p")
+endif
+set backupdir+=$TEMP/vimtemp/
+set directory+=$TEMP/vimtemp/
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

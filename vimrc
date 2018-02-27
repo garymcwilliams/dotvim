@@ -16,7 +16,6 @@
 if has("win32") || has("win64")
   call pathogen#infect('C:\\Users\\gmcwilliams\\vimfiles\\bundle\\{}')
 else
-	:echo "infecting ('/c/Users/gmcwilliams/vimfiles/bundle/{}'"
   call pathogen#infect('/c/Users/gmcwilliams/vimfiles/bundle/{}')
 endif
 
@@ -139,6 +138,13 @@ if has("gui_running")
   elseif has("gui_win32")
 	set guifont=Consolas:h10:cANSI
   endif
+else " not gui_running
+  set term=xterm-256color
+  set t_Co=256
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
+  colorscheme solarized
+  set background=dark
 endif
 
 

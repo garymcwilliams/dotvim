@@ -1,14 +1,14 @@
 if has("win32") || has("win64")
-  if filereadable("E:/Users/gmcwilliams/home/vimfiles/vimrc")
-    set rtp+=E:/Users/gmcwilliams/home/vimfiles
-    source E:/Users/gmcwilliams/home/vimfiles/vimrc
+  if filereadable("C:/Users/gmcwilliams/vimfiles/vimrc")
+    set rtp+=C:/Users/gmcwilliams/vimfiles
+    source C:/Users/gmcwilliams/vimfiles/vimrc
   "else
   "  runtime vimrc
   endif
 else
-  if filereadable("/e/Users/gmcwilliams/home/vimfiles/vimrc")
-    set rtp+=/e/Users/gmcwilliams/home/vimfiles
-    source /e/Users/gmcwilliams/home/vimfiles/vimrc
+  if filereadable("/c/Users/gmcwilliams/vimfiles/vimrc")
+    set rtp+=/c/Users/gmcwilliams/vimfiles
+    source /c/Users/gmcwilliams/vimfiles/vimrc
   "else
   "  runtime vimrc
   endif

@@ -1,3 +1,33 @@
 [submodule "bundle/bundle/ctrlp.vim"]
 	path = bundle/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/gmcwilliams/start/ctrlp.vim"]
+	path = pack/gmcwilliams/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/gmcwilliams/start/fugitive"]
+	path = pack/gmcwilliams/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/gmcwilliams/start/nerdtree"]
+	path = pack/gmcwilliams/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/gmcwilliams/start/nerdtree-git-plugin"]
+	path = pack/gmcwilliams/start/nerdtree-git-plugin
+	url = https://github.com/scrooloose/nerdtree-git-plugin.git
+[submodule "pack/gmcwilliams/start/unimpaired"]
+	path = pack/gmcwilliams/start/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "pack/gmcwilliams/start/vim-airline"]
+	path = pack/gmcwilliams/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/gmcwilliams/start/vim-colors-solarized"]
+	path = pack/gmcwilliams/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "pack/gmcwilliams/start/ansible-vim"]
+	path = pack/gmcwilliams/start/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim.git
+[submodule "pack/gmcwilliams/start/html5"]
+	path = pack/gmcwilliams/start/html5
+	url = https://github.com/othree/html5.vim.git
+[submodule "pack/gmcwilliams/start/html5.vim"]
+	path = pack/gmcwilliams/start/html5.vim
+	url = https://github.com/othree/html5.vim.git

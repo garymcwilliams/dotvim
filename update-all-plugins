@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#
+# update all git submodules (plugins)
+
+git submodule foreach git pull origin master
+

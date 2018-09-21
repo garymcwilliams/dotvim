@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# add a new package
+# 
+# ./add-package package-name package-url
+
+add() {
+	local name=$1
+	local url=$2
+	git submodule add $url pack/gmcwilliams/start/$name
+	git add pack/gmcwilliams/start/$name
+}
+
+#add ctrlp.vim https://github.com/ctrlpvim/ctrlp.vim.git
+#add fugitive https://github.com/tpope/vim-fugitive.git
+#add nerdtree https://github.com/scrooloose/nerdtree.git
+#add nerdtree-git-plugin https://github.com/scrooloose/nerdtree-git-plugin.git
+#add unimpaired https://github.com/tpope/vim-unimpaired.git 
+#add vim-airline https://github.com/vim-airline/vim-airline.git
+#add vim-colors-solarized https://github.com/altercation/vim-colors-solarized.git
+
+add $1 $2
+

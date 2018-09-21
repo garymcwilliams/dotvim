@@ -18,19 +18,29 @@ Installation
 	git clone ssh://ssh.github.com/garymcwilliams/dotvim.git .vim
 	ln -s .vimrc .vim/vimrc
 
-## Then fetch submodules
+## Fetch submodules
+
+To get started on a new server
 
 	cd vimfiles
 	git submodule init
-	git submodule update
+	git submodule update --remote --merge
+	git commit
+
+# Adding a package
+	cd ~/dotfiles
+	git submodule add https://github.com/vim-airline/vim-airline.git pack/gmcwilliams/start/vim-airline
+	git add .gitmodules vim/pack/gmcwilliams/start/vim-airline
+	git commit
 
 # Keep up to date
 
 	cd vimfiles
-	git submodule update
+	git submodule update --remote --merge
+	git commit
 
 If the above does not cause any updates to occur, then update manually:
-git submodule foreach git pull origin master
+	git submodule foreach git pull origin master
 
 please make sure you:
 

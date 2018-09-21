@@ -7,9 +7,6 @@
 [submodule "pack/gmcwilliams/start/nerdtree"]
 	path = pack/gmcwilliams/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "pack/gmcwilliams/start/nerdtree-git-plugin"]
-	path = pack/gmcwilliams/start/nerdtree-git-plugin
-	url = https://github.com/scrooloose/nerdtree-git-plugin.git
 [submodule "pack/gmcwilliams/start/unimpaired"]
 	path = pack/gmcwilliams/start/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git

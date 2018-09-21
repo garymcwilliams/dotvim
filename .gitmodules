@@ -22,3 +22,6 @@
 [submodule "pack/gmcwilliams/start/html5.vim"]
 	path = pack/gmcwilliams/start/html5.vim
 	url = https://github.com/othree/html5.vim.git
+[submodule "pack/gmcwilliams/start/nerdcommenter"]
+	path = pack/gmcwilliams/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

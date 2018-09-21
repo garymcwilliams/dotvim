@@ -22,3 +22,6 @@
 [submodule "pack/gmcwilliams/start/nerdcommenter"]
 	path = pack/gmcwilliams/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "pack/gmcwilliams/start/ansible-vim"]
+	path = pack/gmcwilliams/start/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim.git

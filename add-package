@@ -2,13 +2,12 @@
 #
 # add a new package
 # 
-# ./add-package package-name package-url
+# ./add-package package-url package-name 
 
 add() {
-	local name=$1
-	local url=$2
+	local url=$1
+	local name=$2
 	git submodule add $url pack/gmcwilliams/start/$name
-	git add pack/gmcwilliams/start/$name
 }
 
 add $1 $2

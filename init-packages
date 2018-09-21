@@ -9,11 +9,11 @@ add() {
 }
 
 #add https://github.com/pearofducks/ansible-vim.git ansible-vim
-add https://github.com/ctrlpvim/ctrlp.vim.git ctrlp.vim 
-add fugitive https://github.com/tpope/vim-fugitive.git fugitive 
-add nerdtree https://github.com/scrooloose/nerdtree.git nerdtree 
-add nerdtree-git-plugin https://github.com/scrooloose/nerdtree-git-plugin.git nerdtree-git-plugin 
-add unimpaired https://github.com/tpope/vim-unimpaired.git  unimpaired 
-add vim-airline https://github.com/vim-airline/vim-airline.git vim-airline 
-add vim-colors-solarized https://github.com/altercation/vim-colors-solarized.git vim-colors-solarized 
+#add https://github.com/ctrlpvim/ctrlp.vim.git ctrlp.vim 
+#add https://github.com/tpope/vim-fugitive.git fugitive 
+#add https://github.com/scrooloose/nerdtree.git nerdtree 
+#add https://github.com/scrooloose/nerdtree-git-plugin.git nerdtree-git-plugin 
+#add https://github.com/tpope/vim-unimpaired.git  unimpaired 
+#add https://github.com/vim-airline/vim-airline.git vim-airline 
+#add https://github.com/altercation/vim-colors-solarized.git vim-colors-solarized 
 

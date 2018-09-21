@@ -11,14 +11,6 @@
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Init {{{
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-if has("win32") || has("win64")
-  call pathogen#infect('C:\\Users\\gmcwilliams\\vimfiles\\bundle\\{}')
-else
-  call pathogen#infect('/c/Users/gmcwilliams/vimfiles/bundle/{}')
-endif
-
 " enable airtime extensions
 let g:airline#extensions#tabline#enabled = 1
 

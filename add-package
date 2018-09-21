@@ -21,3 +21,5 @@ add() {
 
 add $1 $2
 
+git add .gitmodules
+

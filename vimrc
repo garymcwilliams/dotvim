@@ -122,7 +122,6 @@ let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-map <C-n> :NERDTreeToggle<CR>
 
 if has("gui_running")
   if has("gui_gtk2")

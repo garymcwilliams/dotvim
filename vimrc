@@ -46,14 +46,6 @@ set backspace=indent,eol,start
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme/Colors {{{
-set background=light " we are using a dark background
-syntax on " syntax highlighting on
-"colorscheme koehler
-colorscheme solarized
-" }}}
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files/Backups {{{
 set makeef=error.err " When using make, where should it dump the file
 if !isdirectory($TEMP."/vimtemp")
@@ -99,6 +91,28 @@ set laststatus=2 " always show the status line
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme/Colors {{{
+set background=light
+syntax on " syntax highlighting on
+
+if has("gui_running")
+  colorscheme solarized
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_win32")
+	set guifont=Consolas:h10:cANSI
+  endif
+else " not gui_running
+  set term=xterm-256color
+  set t_Co=256
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
+  colorscheme elflord
+  set background=dark
+endif
+" }}}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text Formatting/Layout {{{
 set fo=tcrqn " See Help (complex)
 set ai " autoindent
@@ -122,21 +136,6 @@ let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_win32")
-	set guifont=Consolas:h10:cANSI
-  endif
-else " not gui_running
-  set term=xterm-256color
-  set t_Co=256
-  let &t_AB="\e[48;5;%dm"
-  let &t_AF="\e[38;5;%dm"
-  colorscheme solarized
-  set background=dark
-endif
 
 
 " When editing a file, always jump to the last known cursor position.
